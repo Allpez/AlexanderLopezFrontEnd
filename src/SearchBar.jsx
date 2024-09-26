@@ -12,4 +12,3 @@ function SearchBar() {
 }
 
 export {SearchBar};
-
