@@ -1,6 +1,6 @@
 article {
     position: relative;
-    width: 320px;
+    width: 316px;
     transition: all 0.5s ease;
 }
 
@@ -19,12 +19,12 @@ article img:last-child {
     right: 0;
     margin: auto;
     transform: translateY(25%);
-    transition: 0.3s ease;
+    transition: 0.7s ease;
     opacity: 0;
 }
 
 article:hover {
-    transform: perspective(800px) rotateX(-15deg) translateY(-5%) translateZ(0);
+    transform: perspective(800px) rotateX(0) translateY(-10%) translateZ(0);
 }
 
 article::before {
@@ -48,6 +48,9 @@ article:hover::before {
 }
 
 article:hover img:last-child {
+    filter: drop-shadow(
+        0 0 10px rgb(255, 70, 70)
+    );
     opacity: 1;
     transform: translateY(10%);
 }
