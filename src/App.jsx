@@ -1,12 +1,19 @@
 import "./App.css";
 import Header from "./Header";
 import {ContainerCards} from "./ContainerCards";
+import { useState } from "react";
 
 function App() {
+  const [searchText, setSearchText ] = useState("") //variables de estado, estado inicial, funcion que permite modificar el estado
+
+  const handleSearchOnChange = (newValue) => {
+    setSearchText(newValue)
+  }
+console.log(searchText);
   return (
     <>
-      <Header></Header>
-      <ContainerCards></ContainerCards>
+      <Header searchText={searchText} handleSearchOnChange={handleSearchOnChange}></Header>
+      <ContainerCards searchText={searchText}></ContainerCards>
     </>
   )
 }
